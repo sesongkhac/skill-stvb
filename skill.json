@@ -1,0 +1,58 @@
+{
+  "id": "skill-stvb",
+  "name": "Skill The Thực VB ND30",
+  "description": "Sinh file .docx văn bản hành chính theo Nghị định 30/2020",
+  "version": "1.0.0",
+  "author": "sesongkhac",
+  "repository": "https://github.com/sesongkhac/skill-stvb",
+  "type": "generator",
+  "language": "javascript",
+  "runtime": "node",
+  "entry": "scripts/generate_cong_van.js",
+  "commands": [
+    {
+      "name": "gen:cv",
+      "description": "Sinh công văn",
+      "entry": "scripts/generate_cong_van.js",
+      "parameters": {
+        "input": {
+          "type": "string",
+          "description": "Đường dẫn file JSON input",
+          "required": true
+        },
+        "output": {
+          "type": "string",
+          "description": "Đường dẫn file DOCX output",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "gen:qd",
+      "description": "Sinh quyết định",
+      "entry": "scripts/generate_quyet_dinh.js",
+      "parameters": {
+        "input": {
+          "type": "string",
+          "description": "Đường dẫn file JSON input",
+          "required": true
+        },
+        "output": {
+          "type": "string",
+          "description": "Đường dẫn file DOCX output",
+          "required": true
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "docx": "^9.1.1"
+  },
+  "tags": [
+    "document",
+    "vietnamese",
+    "legal",
+    "docx",
+    "nd30"
+  ]
+}
